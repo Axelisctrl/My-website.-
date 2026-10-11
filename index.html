@@ -1,100 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AXEL — The Next Edge</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:#000;
-  color:#fff;
-  font-family:'Montserrat',sans-serif;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-}
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:32px 48px 0;
-  font-size:12px;
-  letter-spacing:0.22em;
-  font-weight:500;
-}
-nav{display:flex;gap:42px}
-nav a{color:#fff;text-decoration:none}
-.right{display:flex;align-items:center;gap:32px}
-.dots{display:grid;grid-template-columns:repeat(3,5px);gap:4px}
-.dots span{width:5px;height:5px;background:#fff;border-radius:50%}
-main{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding-bottom:40px;
-}
-.logo{width:100px;margin-bottom:28px}
-.brand{
-  font-size:92px;
-  font-weight:500;
-  letter-spacing:0.28em;
-  margin-bottom:18px;
-  line-height:0.85;
-}
-.tag{
-  font-size:11px;
-  letter-spacing:0.68em;
-  margin-bottom:52px;
-  font-weight:400;
-}
-.btn{
-  border:1px solid rgba(255,255,255,0.9);
-  padding:15px 52px;
-  font-size:12px;
-  letter-spacing:0.42em;
-  text-decoration:none;
-  color:#fff;
-  transition:0.25s;
-}
-.btn:hover{background:#fff;color:#000}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AXEL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <nav>
-    <a href="#">AXEL</a>
-    <a href="#">PRODUCT</a>
-    <a href="#">TECHNOLOGY</a>
-    <a href="#">ABOUT</a>
-    <a href="#">CONTACT</a>
-  </nav>
-  <div class="right">
-    <a href="#">SIGN IN</a>
-    <div class="dots">
-      <span></span><span></span><span></span>
-      <span></span><span></span><span></span>
-      <span></span><span></span><span></span>
-    </div>
+
+<!-- LOGO (traced from your picture) -->
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="mk" viewBox="0 0 95 90"><path fill="#fff" fill-rule="evenodd" d="M43.9 59.0 L47.1 61.2 L61.8 60.9 L51.5 50.8Z M44.8 31.8 L42.5 31.6 L11.5 76.0 L31.4 58.9 L46.5 42.0 L47.9 38.5Z M45.9 10.6 L63.2 55.5 L80.2 78.5 L56.8 14.4 L54.1 11.8Z"/></symbol>
+<symbol id="wm" viewBox="0 0 282 72"><path fill="#fff" fill-rule="evenodd" d="M165.8 57.0 L167.4 60.0 L201.1 62.4 L203.9 59.0 L202.1 54.8 L168.5 52.9Z M169.5 36.1 L171.0 38.8 L204.8 40.8 L207.0 37.4 L204.5 33.2 L170.5 31.6Z M245.1 14.4 L236.6 63.5 L273.1 66.2 L274.8 63.2 L273.1 59.2 L245.6 56.8 L251.8 16.2 L249.9 14.1Z M172.9 13.4 L175.0 17.9 L208.2 19.4 L210.6 15.4 L209.2 12.5 L175.8 10.0Z M95.8 6.2 L96.0 9.6 L108.8 31.5 L88.1 54.8 L96.4 54.9 L113.4 38.8 L123.9 55.9 L132.2 57.8 L132.0 54.1 L119.4 32.1 L140.8 8.8 L132.2 8.6 L114.9 24.9 L103.2 6.8Z M41.8 3.5 L9.2 46.2 L8.8 50.5 L16.0 49.2 L39.2 18.8 L52.6 52.5 L60.0 53.4Z"/></symbol>
+<symbol id="pdf" viewBox="0 0 44 54"><path d="M2 2h28l12 12v38H2z" fill="none" stroke="#fff" stroke-width="2"/><path d="M30 2v12h12" fill="none" stroke="#fff" stroke-width="2"/><text x="8" y="40" fill="#c6ff3d" font-size="13" font-weight="700" font-family="sans-serif">PDF</text></symbol>
+</defs></svg>
+
+<!-- INTRO PAGE: logo + name + Enter -->
+<div id="intro" class="page on">
+  <svg class="im" viewBox="0 0 95 90"><use href="#mk"/></svg>
+  <svg class="iw" viewBox="0 0 282 72"><use href="#wm"/></svg>
+  <button class="enter" onclick="go('home')">Enter</button>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="nav"><div class="w">
+  <div class="logo" onclick="go('home')">
+    <svg viewBox="0 0 95 90" width="30" height="28"><use href="#mk"/></svg>
+    <svg viewBox="0 0 282 72" width="82" height="21"><use href="#wm"/></svg>
   </div>
-</header>
+  <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  <ul id="menu">
+    <li><a class="nv" data-p="home" onclick="go('home')">Home</a></li>
+    <li><a class="nv" data-p="courses" onclick="go('courses')">Courses</a></li>
+    <li><a class="nv" data-p="docs" onclick="go('docs')">Free PDFs</a></li>
+    <li><a class="nv" data-p="about" onclick="go('about')">About</a></li>
+    <li><a class="nv" data-p="contact" onclick="go('contact')">Contact</a></li>
+  </ul>
+</div></nav>
 
 <main>
-  <!-- Logo A with bridge -->
-  <svg class="logo" viewBox="0 0 140 120">
-    <polygon points="70,8 26,112 44,112 70,52 96,112 114,112" fill="#fff"/>
-    <rect x="52" y="68" width="36" height="11" fill="#000"/>
-  </svg>
 
-  <!-- AXEL with open A and disconnected E style -->
-  <div class="brand">AXEL</div>
+<!-- HOME -->
+<div id="home" class="page">
+  <header class="hero"><div class="w">
+    <div class="eyebrow">The AXEL Academy</div>
+    <h1>Learn it once. <em>Master it for life.</em></h1>
+    <p class="lead">Practical courses and free downloadable guides — built to take you from curious to confident.</p>
+    <div class="row">
+      <button class="btn" onclick="go('courses')">Browse courses</button>
+      <button class="btn o" onclick="go('docs')">Free PDFs</button>
+    </div>
+    <div class="stats">
+      <div><b>6</b><span>Courses</span></div>
+      <div><b>6</b><span>Free PDFs</span></div>
+      <div><b>24/7</b><span>Access</span></div>
+    </div>
+  </div></header>
 
-  <div class="tag">THE NEXT EDGE</div>
-  <a href="#" class="btn">ENTER</a>
+  <section><div class="w">
+    <div class="kick">Featured</div><h2>Start here.</h2>
+    <p class="sub">Our most popular courses.</p>
+    <div class="grid" id="feat"></div>
+  </div></section>
+
+  <section style="background:#080808;border-block:1px solid var(--line)"><div class="w two">
+    <div>
+      <div class="kick">How it works</div><h2>Simple. Clear. Yours.</h2>
+      <div class="steps">
+        <div><b>Pick a course</b> — choose your level and topic.</div>
+        <div><b>Learn at your pace</b> — video lessons and PDFs, forever.</div>
+        <div><b>Apply it</b> — finish real projects and level up.</div>
+      </div>
+    </div>
+    <div class="box"><svg viewBox="0 0 95 90"><use href="#mk"/></svg></div>
+  </div></section>
+
+  <section><div class="w">
+    <div class="kick">Students</div><h2>What people say.</h2>
+    <div class="tst" style="margin-top:30px">
+      <div>“Clear, practical, no fluff. I finished my first project in a week.”<b>— SARAH K.</b></div>
+      <div>“The free PDFs alone are worth it. The course took me further.”<b>— MARCUS T.</b></div>
+      <div>“Best structured learning I've found online.”<b>— LEILA R.</b></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- COURSES -->
+<div id="courses" class="page">
+  <div class="ph"><div class="w">
+    <div class="kick">Courses</div><h2>Choose your path.</h2>
+    <p class="sub">Self-paced lessons with lifetime access.</p>
+  </div></div>
+  <div class="w"><div class="flt" id="flt"></div><div class="grid" id="cg"></div></div>
+</div>
+
+<!-- FREE PDFs -->
+<div id="docs" class="page">
+  <div class="ph"><div class="w">
+    <div class="kick">Free PDFs</div><h2>Free resource library.</h2>
+    <p class="sub">Guides and cheat sheets from every course — free to download.</p>
+  </div></div>
+  <section><div class="w two" style="align-items:start">
+    <div class="docs" id="dl"></div>
+    <div>
+      <h2 style="font-size:30px">Get instant access</h2>
+      <p class="pp">Enter your email and we'll send the PDF to your inbox.</p>
+      <form id="df">
+        <input id="dsel" readonly placeholder="Select a PDF from the list">
+        <input type="email" required placeholder="you@email.com">
+        <button class="btn" type="submit">Send me the PDF</button>
+      </form>
+      <div class="ok" id="dok">✓ Done! Check your inbox.</div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+  <div class="ph"><div class="w">
+    <div class="kick">About</div><h2>Hi, I'm AXEL.</h2>
+    <p class="sub">Teacher. Builder. Lifelong learner.</p>
+  </div></div>
+  <section><div class="w two">
+    <div class="box"><svg viewBox="0 0 95 90"><use href="#mk"/></svg></div>
+    <div>
+      <p class="pp">I teach what I wish someone had taught me: how to learn faster, think across fields, and turn knowledge into real results.</p>
+      <p class="pp">Every course and PDF is built from real experience — practical, honest and made to be finished.</p>
+      <div class="stats" style="margin:26px 0 0">
+        <div><b>5K+</b><span>Students</span></div>
+        <div><b>6</b><span>Courses</span></div>
+        <div><b>4.9★</b><span>Rating</span></div>
+      </div>
+    </div>
+  </div></section>
+  <section style="padding-top:0"><div class="w faq">
+    <h2 style="font-size:32px;margin-bottom:18px">FAQ</h2>
+    <details><summary>Do I get lifetime access?</summary><p>Yes — pay once, learn forever, including updates.</p></details>
+    <details><summary>Are the PDFs really free?</summary><p>Yes. Just enter your email and download.</p></details>
+    <details><summary>Is there a refund?</summary><p>30-day money-back guarantee on every course.</p></details>
+  </div></section>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+  <div class="ph"><div class="w">
+    <div class="kick">Contact</div><h2>Let's talk.</h2>
+    <p class="sub">Questions, collaborations or feedback — send a message.</p>
+  </div></div>
+  <section><div class="w">
+    <form id="cf">
+      <input required placeholder="Your name">
+      <input type="email" required placeholder="Email">
+      <textarea rows="5" required placeholder="Message"></textarea>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+    <div class="ok" id="cok">✓ Message sent. Thank you!</div>
+  </div></section>
+</div>
+
 </main>
+
+<footer id="ft"><div class="w">
+  <svg viewBox="0 0 282 72" width="80" height="20"><use href="#wm"/></svg>
+  <span>© 2026 AXEL. All rights reserved.</span>
+</div></footer>
+
+<script src="script.js"></script>
 </body>
 </html>
