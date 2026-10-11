@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXEL — The Next Edge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 48px;
+      letter-spacing: 0.22em;
+      font-size: 13px;
+    }
+    .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 600; }
+    nav a { color: #fff; text-decoration: none; margin-left: 40px; }
+    nav a:hover { opacity: 0.65; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .logo-a { width: 80px; height: 72px; margin-bottom: 24px; }
+    .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 92px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      line-height: 0.9;
+      margin-bottom: 18px;
+    }
+    .tagline {
+      font-size: 13px;
+      letter-spacing: 0.58em;
+      margin-bottom: 46px;
+    }
+    .enter-btn {
+      border: 1px solid rgba(255,255,255,0.75);
+      padding: 15px 50px;
+      font-size: 13px;
+      letter-spacing: 0.38em;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.25s;
+    }
+    .enter-btn:hover { background: #fff; color: #000; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-text">AXEL</div>
+    <nav>
+      <a href="#">WORK</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- A logo with clear bridge / crossbar -->
+    <svg class="logo-a" viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer A shape -->
+      <polygon points="60,8 26,102 40,102 60,52 80,102 94,102" fill="#fff"/>
+      <!-- Bridge (crossbar) -->
+      <rect x="48" y="62" width="24" height="8" fill="#000"/>
+    </svg>
+
+    <div class="brand">AXEL</div>
+    <div class="tagline">THE NEXT EDGE</div>
+    <a href="#" class="enter-btn">ENTER</a>
+  </main>
+</body>
+</html>
