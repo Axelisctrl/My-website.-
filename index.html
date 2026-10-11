@@ -10,7 +10,7 @@
 body{
   background:#000;
   color:#fff;
-  font-family:Montserrat,sans-serif;
+  font-family:'Montserrat',sans-serif;
   min-height:100vh;
   display:flex;
   flex-direction:column;
@@ -19,16 +19,16 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:28px 40px;
-  font-size:13px;
-  letter-spacing:0.18em;
+  padding:32px 48px 0;
+  font-size:12px;
+  letter-spacing:0.22em;
   font-weight:500;
 }
-nav{display:flex;gap:36px;align-items:center}
+nav{display:flex;gap:42px}
 nav a{color:#fff;text-decoration:none}
-.right-nav{display:flex;align-items:center;gap:28px}
-.grid-icon{display:grid;grid-template-columns:repeat(3,4px);gap:3px}
-.grid-icon span{width:4px;height:4px;background:#fff;border-radius:50%}
+.right{display:flex;align-items:center;gap:32px}
+.dots{display:grid;grid-template-columns:repeat(3,5px);gap:4px}
+.dots span{width:5px;height:5px;background:#fff;border-radius:50%}
 main{
   flex:1;
   display:flex;
@@ -36,26 +36,27 @@ main{
   align-items:center;
   justify-content:center;
   text-align:center;
+  padding-bottom:40px;
 }
-.logo-a{width:92px;margin-bottom:22px}
+.logo{width:100px;margin-bottom:28px}
 .brand{
-  font-size:88px;
+  font-size:92px;
   font-weight:500;
-  letter-spacing:0.22em;
-  margin-bottom:14px;
-  line-height:1;
+  letter-spacing:0.28em;
+  margin-bottom:18px;
+  line-height:0.85;
 }
 .tag{
-  font-size:12px;
-  letter-spacing:0.62em;
-  margin-bottom:48px;
+  font-size:11px;
+  letter-spacing:0.68em;
+  margin-bottom:52px;
   font-weight:400;
 }
 .btn{
-  border:1px solid rgba(255,255,255,0.85);
-  padding:14px 46px;
-  letter-spacing:0.36em;
-  font-size:13px;
+  border:1px solid rgba(255,255,255,0.9);
+  padding:15px 52px;
+  font-size:12px;
+  letter-spacing:0.42em;
   text-decoration:none;
   color:#fff;
   transition:0.25s;
@@ -72,9 +73,9 @@ main{
     <a href="#">ABOUT</a>
     <a href="#">CONTACT</a>
   </nav>
-  <div class="right-nav">
+  <div class="right">
     <a href="#">SIGN IN</a>
-    <div class="grid-icon">
+    <div class="dots">
       <span></span><span></span><span></span>
       <span></span><span></span><span></span>
       <span></span><span></span><span></span>
@@ -83,13 +84,13 @@ main{
 </header>
 
 <main>
-  <!-- Logo A (with bridge) -->
-  <svg class="logo-a" viewBox="0 0 120 110">
-    <polygon points="60,6 22,104 38,104 60,48 82,104 98,104" fill="#fff"/>
-    <rect x="46" y="62" width="28" height="9" fill="#000"/>
+  <!-- Logo A with bridge -->
+  <svg class="logo" viewBox="0 0 140 120">
+    <polygon points="70,8 26,112 44,112 70,52 96,112 114,112" fill="#fff"/>
+    <rect x="52" y="68" width="36" height="11" fill="#000"/>
   </svg>
 
-  <!-- AXEL — open A + disconnected E -->
+  <!-- AXEL with open A and disconnected E style -->
   <div class="brand">AXEL</div>
 
   <div class="tag">THE NEXT EDGE</div>
